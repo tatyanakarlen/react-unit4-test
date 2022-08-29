@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useState } from "react";
 import './App.css';
+import Circles from './Components/Circles/Circles'
+import CircleSelector from './Components/CircleSelector/CircleSelector'
+
+
+
 
 function App() {
+
+  const [circleNumber, setCircleNumber] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <header className="App-header">UNIT 4 FINAL ASSESSMENT</header>
+    <main>
+      <CircleSelector circleNumber={circleNumber} setCircleNumber={setCircleNumber}/>
+      <Circles circleNumber={circleNumber} />
+    </main>
+      
     </div>
   );
 }
